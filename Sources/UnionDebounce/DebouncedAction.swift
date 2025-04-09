@@ -1,6 +1,6 @@
 //
 //  DebouncedAction.swift
-//  iDebouncedChange
+//  union-debounce
 //
 //  Created by Ben Sage on 3/29/25.
 //

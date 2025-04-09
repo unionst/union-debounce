@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "iDebounce",
+    name: "union-debounce",
     platforms: [
         .iOS(.v13),
         .macOS(.v10_15),
@@ -12,13 +12,13 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "iDebounce",
-            targets: ["iDebounce"]
+            name: "UnionDebounce",
+            targets: ["UnionDebounce"]
         ),
     ],
     targets: [
         .target(
-            name: "iDebounce"
+            name: "UnionDebounce"
         ),
     ]
 )
