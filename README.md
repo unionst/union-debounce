@@ -1,11 +1,11 @@
-# iDebouncedChange
+# UnionDebounce
 
-A Swift package that provides debounced observers for SwiftUI views targeting iOS 17.0+ (and corresponding macOS, tvOS, watchOS platforms). Use it to delay handling of frequent value changes, such as text editing or rapidly incremented counters.
+A Swift package that provides debounced observers for SwiftUI views. Use it to delay handling of frequent value changes, such as text editing or rapidly incremented counters.
 
 ## Installation
 
 1. In Xcode, select **File** → **Add Packages...**.
-1. Enter `https://github.com/blsage/iDebouncedChange` in the search bar.
+1. Enter `https://github.com/unionst/union-debounce` in the search bar.
 1. Choose **Add Package** to your project.
 
 ## Usage
@@ -14,7 +14,7 @@ A Swift package that provides debounced observers for SwiftUI views targeting iO
 
 ```swift
 import SwiftUI
-import iDebouncedChange
+import UnionDebounce
 
 struct ExampleView: View {
     @State private var text = ""
@@ -38,7 +38,7 @@ struct ExampleView: View {
 
 ```swift
 import SwiftUI
-import iDebouncedChange
+import UnionDebounce
 
 struct AnotherExampleView: View {
     @State private var counter = 0
