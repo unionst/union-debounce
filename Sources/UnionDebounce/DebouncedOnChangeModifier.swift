@@ -16,4 +16,56 @@ struct DebouncedOnChangeModifier<Value: Equatable> {
     let initial: Bool
     let zeroParamAction: (() -> Void)?
     let twoParamAction: ((Value, Value) -> Void)?
+
+    nonisolated init(
+        value: Value,
+        debounce: Double,
+        initial: Bool,
+        action: @escaping () -> Void
+    ) {
+        self.value = value
+        self.debounce = .seconds(debounce)
+        self.initial = initial
+        self.zeroParamAction = action
+        self.twoParamAction = nil
+    }
+
+    nonisolated init(
+        value: Value,
+        debounce: Double,
+        initial: Bool,
+        action: @escaping (Value, Value) -> Void
+    ) {
+        self.value = value
+        self.debounce = .seconds(debounce)
+        self.initial = initial
+        self.zeroParamAction = nil
+        self.twoParamAction = action
+    }
+
+    nonisolated init(
+        value: Value,
+        debounce: Duration,
+        initial: Bool,
+        action: @escaping () -> Void
+    ) {
+        self.value = value
+        self.debounce = debounce
+        self.initial = initial
+        self.zeroParamAction = action
+        self.twoParamAction = nil
+    }
+
+    nonisolated init(
+        value: Value,
+        debounce: Duration,
+        initial: Bool,
+        action: @escaping (Value, Value) -> Void
+    ) {
+        self.value = value
+        self.debounce = debounce
+        self.initial = initial
+        self.zeroParamAction = nil
+        self.twoParamAction = action
+    }
 }
